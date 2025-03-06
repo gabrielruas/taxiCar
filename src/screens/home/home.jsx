@@ -1,10 +1,12 @@
-import { Text } from "react-native";
+import { Text, ImageBackground } from "react-native";
+import icons from "../../constants/icons";
+import { styles } from "./home.styles";
 
 function Home() {
     return (
-        <>
-            <Text style={{ fontSize: 50 }}>Logo TaxiCar</Text>
-        </>
+        <ImageBackground source={icons.bg} resizeMode="cover" style={styles}>
+        </ImageBackground>
+            
     );
 }
 
