@@ -1,13 +1,17 @@
 import { Text, ImageBackground, Image, TouchableOpacity, Alert} from "react-native";
 import icons from "../../constants/icons";
+import { useNavigation } from "@react-navigation/native";
 import { styles } from "./home.styles";
 
-function Home() {
-    function OpenPassenger(){
-        Alert.alert(" Abrir Passenger OK....")
+function Home(props) {
+    const navigation = useNavigation();
+
+    function OpenPassenger() {
+        navigation.navigate("passenger");
     }
-    function OpenRide(){
-        Alert.alert(" Abrir Ride OK....")
+    
+    function OpenRide() {
+        navigation.navigate("ride");
     }
     return (
         <ImageBackground source={icons.bg} resizeMode="cover" style={styles.bg}>

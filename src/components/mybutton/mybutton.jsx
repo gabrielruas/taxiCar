@@ -1,10 +1,10 @@
-import {Text, Touchable, TouchableOpacity} from "react-native";
-import {styles} from " ./mybutton.styles.js"
+import {Text, TouchableOpacity} from "react-native";
+import {styles} from "./mybutton.style.js"
 
-function MyButton() {
-    return <TouchableOpacity styles={styles.btnYellow}>
-        <Text> Confirmar</Text>
-    </TouchableOpacity>;
+function MyButton(props) {
+    return <TouchableOpacity style={styles.btnYellow}>
+        <Text style={styles.textDark}> {props.text}</Text>
+    </TouchableOpacity>
 
 }
 export default MyButton;
